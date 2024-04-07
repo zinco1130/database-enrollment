@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>수강신청</title>
+</head>
+<body>
+    <h1>개설강좌</h1>
+    <table style="display: block;height:200px; overflow-y: scroll;">
+        <tr style = "background-color: rgb(255, 197, 232);">
+            <th>crsCode</th>
+            <th>subArea</th>
+            <th>year</th>
+            <th>crsNum</th>
+            <th>subName</th>
+            <th>grade</th>
+            <th>prName</th>
+            <th>crsTime</th>
+            <th>room</th>
+        </tr>
+        <% course.forEach(function(el, index) { %>
+            <tr>
+                <td><%= el.crsCode %></td>
+                <td><%= el.subArea %></td>
+                <td><%= el.year %></td>
+                <td><%= el.crsNum %></td>
+                <td><%= el.subName %></td>
+                <td><%= el.grade %></td>
+                <td><%= el.prName %></td>
+                <td><%= el.crsTime %></td>
+                <td><%= el.room %></td>
+            </tr>
+        <% }); %>
+    </table>
+    <h1>신청내역</h1>
+    <table style="display: block;height:200px; overflow-y: scroll;">
+        <tr style = "background-color: rgb(108, 242, 220);">
+            <th>crsCode</th>
+            <th>subArea</th>
+            <th>year</th>
+            <th>crsNum</th>
+            <th>subName</th>
+            <th>grade</th>
+            <th>prName</th>
+            <th>crsTime</th>
+            <th>room</th>
+        </tr>
+        <% student.forEach(function(el, index) { %>
+            <tr>
+                <td><%= el.crsCode %></td>
+                <td><%= el.subArea %></td>
+                <td><%= el.year %></td>
+                <td><%= el.crsNum %></td>
+                <td><%= el.subName %></td>
+                <td><%= el.grade %></td>
+                <td><%= el.prName %></td>
+                <td><%= el.crsTime %></td>
+                <td><%= el.room %></td>
+            </tr>
+        <% }); %>
+    </table>
+    <h1>남은과목보기</h1>
+    <table style="display: block;height:200px; overflow-y: scroll;">
+        <tr style = "background-color: rgb(243, 242, 187);">
+            <th>crsCode</th>
+            <th>subArea</th>
+            <th>year</th>
+            <th>crsNum</th>
+            <th>subName</th>
+            <th>grade</th>
+            <th>prName</th>
+            <th>crsTime</th>
+            <th>room</th>
+            <th>week</th>
+            <th>starttime</th>
+            <th>finishtime</th>
+        </tr>
+        <% week.forEach(function(el, index) { %>
+            <tr>
+                <td><%= el.crsCode %></td>
+                <td><%= el.subArea %></td>
+                <td><%= el.year %></td>
+                <td><%= el.crsNum %></td>
+                <td><%= el.subName %></td>
+                <td><%= el.grade %></td>
+                <td><%= el.prName %></td>
+                <td><%= el.crsTime %></td>
+                <td><%= el.room %></td>
+                <td><%= el.week %></td>
+                <td><%= el.starttime %></td>
+                <td><%= el.finishtime %></td>
+            </tr>
+        <% }); %>
+    </table>
+</body>
+</html>
